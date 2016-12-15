@@ -1,0 +1,8 @@
+{
+	"version": "2.1.4",
+	"compilerOptions": {
+	 "target": "es5",
+    	 "emitDecoratorMetadata": true,
+    	 "experimentalDecorators": true
+	}
+}
