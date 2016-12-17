@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { AppRoutingModule } from './app.routing.ts';
 
 @Component({
 	selector: 'app',
-	template: '<router-outlet></router-outlet>'
+	template: '<h1>admin template soon<h1>'
 })
 
 export class AppComponent {}
