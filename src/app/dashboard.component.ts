@@ -4,9 +4,5 @@ import { Component } from '@angular/core';
   selector: 'dashboard',
   templateUrl: './pages/dashboard/dashboard.component.html'
 })
-export class Dashboard {
-
-  constructor() {
-  }
-
+export class DashboardComponent {
 }
