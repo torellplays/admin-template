@@ -19,7 +19,7 @@ npm run build
 ```
 You can run project now. Type
 ```
-npm run serve
+npm run server
 ```
 It's going to work on `localhost:8080` by default. This project features live reloading, which makes working on it easier.
 
