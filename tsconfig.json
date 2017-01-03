@@ -6,10 +6,13 @@
 	 "sourceMap": true,
    "experimentalDecorators": true,
 	 "module": "commonjs",
-   "moduleResolution": "node",
-   "sourceMap": true,
-	 "typeRoots": [
-      "../../node_modules/@types/"
-    ]
-	}
+   "moduleResolution": "node"
+
+ },
+ "compileOnSave": false,
+  "buildOnSave": false,
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }
 }
