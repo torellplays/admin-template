@@ -1,9 +1,10 @@
+
 import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app',
 	template: `
-		<dashboard></dashboard>
+	 <router-outlet></router-outlet>
 	`
 })
 
