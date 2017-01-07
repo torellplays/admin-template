@@ -9,6 +9,10 @@ import { TopNavComponent } from './pages/layout/top-nav.component';
 import { BoxedComponent } from './pages/layout/boxed.component';
 import { FixedComponent } from './pages/layout/fixed.component';
 import { CollapsedSidebarComponent } from './pages/layout/collapsed-sidebar.component';
+import { ChartjsComponent } from './pages/charts/chartjs.component';
+import { MorrisComponent } from './pages/charts/morris.component';
+import { FlotComponent } from './pages/charts/flot.component';
+import { InlineComponent } from './pages/charts/inline.component';
 
 
 const routes: Routes = [
@@ -21,6 +25,10 @@ const routes: Routes = [
 { path: 'boxed', component: BoxedComponent },
 { path: 'fixed', component: FixedComponent },
 { path: 'collapsed-sidebar', component: CollapsedSidebarComponent },
+{ path: 'chartjs', component: ChartjsComponent },
+{ path: 'morris', component: MorrisComponent },
+{ path: 'flot', component: FlotComponent },
+{ path: 'inline', component: InlineComponent },
 { path: '' , redirectTo: '/dashboard', pathMatch: 'full' }
 
 ];
