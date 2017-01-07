@@ -6,6 +6,10 @@ import { WidgetsComponent } from './pages/widgets.component';
 import { DataTablesComponent } from './pages/tables/data-tables.component';
 import { SimpleTablesComponent } from './pages/tables/simple-tables.component';
 import { TopNavComponent } from './pages/layout/top-nav.component';
+import { BoxedComponent } from './pages/layout/boxed.component';
+import { FixedComponent } from './pages/layout/fixed.component';
+import { CollapsedSidebarComponent } from './pages/layout/collapsed-sidebar.component';
+
 
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
@@ -14,6 +18,9 @@ const routes: Routes = [
 { path: 'datatables', component: DataTablesComponent },
 { path: 'simpletables', component: SimpleTablesComponent },
 { path: 'top-nav', component: TopNavComponent },
+{ path: 'boxed', component: BoxedComponent },
+{ path: 'fixed', component: FixedComponent },
+{ path: 'collapsed-sidebar', component: CollapsedSidebarComponent },
 { path: '' , redirectTo: '/dashboard', pathMatch: 'full' }
 
 ];
