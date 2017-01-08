@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./flot.component.html')
 })
 export class FlotComponent {
+  title = 'AdminLTE 2 | Flot Charts';
 }

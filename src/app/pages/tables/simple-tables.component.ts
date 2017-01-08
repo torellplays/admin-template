@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./simple-tables.component.html')
 })
 export class SimpleTablesComponent {
+  title = 'AdminLTE 2 | Simple Tables';
 }

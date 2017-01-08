@@ -7,16 +7,16 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../../assets/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../../assets/dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a routerLink="/dashboard">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -62,7 +62,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -75,7 +75,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -87,7 +87,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../assets/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Developers
@@ -99,7 +99,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Sales Department
@@ -111,7 +111,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="../../../assets/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Reviewers
@@ -244,13 +244,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../../../assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../../../assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -298,7 +298,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../../../assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -327,8 +327,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a routerLink="/dashboard"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a routerLink="/dashboard2"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -340,14 +340,14 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+            <li><a routerLink="/top-nav"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a routerLink="/boxed"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a routerLink="/fixed"><i class="fa fa-circle-o"></i> Fixed</a></li>
+            <li><a routerLink="/collapsed-sidebar"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>
         </li>
         <li>
-          <a href="../widgets.html">
+          <a routerLink="/widgets">
             <i class="fa fa-th"></i> <span>Widgets</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
@@ -363,10 +363,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+            <li><a routerLink="/chartjs"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li><a routerLink="/morris"><i class="fa fa-circle-o"></i> Morris</a></li>
+            <li><a routerLink="/flot"><i class="fa fa-circle-o"></i> Flot</a></li>
+            <li><a routerLink="/inline"><i class="fa fa-circle-o"></i> Inline charts</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -378,12 +378,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a routerLink="/general"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a routerLink="/icons"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li><a routerLink="/buttons"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li><a routerLink="/sliders"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li><a routerLink="/timeline"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li><a routerLink="/modals"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -394,9 +394,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a routerLink="/general-elements"><i class="fa fa-circle-o"></i> General Elements</a></li>
+            <li><a routerLink="/advanced-elements"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+            <li><a routerLink="/editors"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -407,12 +407,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            <li><a routerLink="/simpletables"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+            <li><a routerLink="/datatables"><i class="fa fa-circle-o"></i> Data tables</a></li>
           </ul>
         </li>
         <li>
-          <a href="../calendar.html">
+          <a routerLink="/calendar">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -421,7 +421,7 @@
           </a>
         </li>
         <li>
-          <a href="../mailbox/mailbox.html">
+          <a routerLink="/mailbox">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
@@ -482,7 +482,7 @@
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul>
         </li>
-        <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a routerLink="/documentation/index"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
@@ -517,7 +517,7 @@
 
           <p>
             We will work on fixing that right away.
-            Meanwhile, you may <a href="../../index.html">return to dashboard</a> or try using the search form.
+            Meanwhile, you may <a routerLink="/dashboard">return to dashboard</a> or try using the search form.
           </p>
 
           <form class="search-form">
@@ -746,12 +746,12 @@
 <!-- jQuery 2.2.3 -->
 <script src="../../../assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../../assets/bootstrapjs/bootstrap.min.js"></script>
 <!-- FastClick -->
 <script src="../../../assets/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/app.min.js"></script>
+<script src="../../../assets/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="../../../assets/dist/js/demo.js"></script>
 </body>
 </html>

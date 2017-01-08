@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./boxed.component.html')
 })
 export class BoxedComponent {
+  title = 'AdminLTE 2 | Boxed Layout';
 }

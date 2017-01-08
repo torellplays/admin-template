@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./data-tables.component.html')
 })
 export class DataTablesComponent {
+  title = 'AdminLTE2 | Data Tables';
 }

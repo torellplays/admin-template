@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./collapsed-sidebar.component.html')
 })
 export class CollapsedSidebarComponent {
+  title = 'AdminLTE 2 | Collapsed Sidebar Layout';
 }

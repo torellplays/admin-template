@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Flot Charts</title>
+  <title>{{title}}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -30,7 +30,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a routerLink="/dashboard">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -379,12 +379,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a routerLink="/general"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a routerLink="/icons"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li><a routerLink="/buttons"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li><a routerLink="/sliders"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li><a routerLink="/timeline"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li><a routerLink="/modals"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -395,9 +395,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a routerLink="/general-elements"><i class="fa fa-circle-o"></i> General Elements</a></li>
+            <li><a routerLink="/advanced-elements"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+            <li><a routerLink="/editors"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -413,7 +413,7 @@
           </ul>
         </li>
         <li>
-          <a href="../calendar.html">
+          <a routerLink="/calendar">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -422,7 +422,7 @@
           </a>
         </li>
         <li>
-          <a href="../mailbox/mailbox.html">
+          <a routerLink="/mailbox">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
@@ -439,15 +439,15 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li><a href="../examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li><a href="../examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li><a href="../examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li><a href="../examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li><a href="../examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="../examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="../examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li><a routerLink="/invoice"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li><a routerLink="/profile"><i class="fa fa-circle-o"></i> Profile</a></li>
+            <li><a routerLink="/login"><i class="fa fa-circle-o"></i> Login</a></li>
+            <li><a routerLink="/register"><i class="fa fa-circle-o"></i> Register</a></li>
+            <li><a routerLink="/lockscreen"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+            <li><a routerLink="/404"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+            <li><a routerLink="/500"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+            <li><a routerLink="/blank"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a routerLink="/pace"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -483,7 +483,7 @@
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul>
         </li>
-        <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a routerLink="/documentation/index"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>

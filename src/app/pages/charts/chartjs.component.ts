@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./chartjs.component.html')
 })
 export class ChartjsComponent {
+  title = 'AdminLTE 2 | ChartJS';
 }

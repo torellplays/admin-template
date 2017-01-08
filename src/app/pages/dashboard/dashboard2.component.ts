@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   template: require('./dashboard2.component.html')
 })
 export class Dashboard2Component {
+  title = 'AdminLTE 2 | Dashboard';
 }

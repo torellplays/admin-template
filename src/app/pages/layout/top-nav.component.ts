@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./top-nav.component.html')
 })
 export class TopNavComponent {
+  title = 'AdminLTE 2 | Top Navigation';
 }

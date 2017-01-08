@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   template: require('./inline.component.html')
 })
 export class InlineComponent {
+  title = 'AdminLTE 2 | Inline Charts';
 }
