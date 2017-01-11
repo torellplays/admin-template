@@ -15,6 +15,8 @@ import { FlotComponent } from './pages/charts/flot.component';
 import { InlineComponent } from './pages/charts/inline.component';
 
 
+
+
 const routes: Routes = [
 { path: 'dashboard', component: DashboardComponent },
 { path: 'dashboard2', component: Dashboard2Component },

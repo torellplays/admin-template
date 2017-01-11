@@ -14,7 +14,9 @@ import { ChartjsComponent } from './pages/charts/chartjs.component';
 import { MorrisComponent } from './pages/charts/morris.component';
 import { FlotComponent } from './pages/charts/flot.component';
 import { InlineComponent } from './pages/charts/inline.component';
-
+import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { MainFooterComponent } from './components/main-footer/main-footer.component';
+import { MainSidebarComponent } from './components/main-sidebar/main-sidebar.component';
 import { routing } from './app.routing';
 
 
@@ -23,7 +25,8 @@ import { routing } from './app.routing';
   declarations: [ AppComponent, DashboardComponent, Dashboard2Component, WidgetsComponent,
                   DataTablesComponent, SimpleTablesComponent, TopNavComponent, BoxedComponent,
                   FixedComponent, CollapsedSidebarComponent, ChartjsComponent, MorrisComponent,
-                  FlotComponent, InlineComponent
+                  FlotComponent, InlineComponent, MainHeaderComponent, MainFooterComponent,
+                  MainSidebarComponent
                 ],
   bootstrap:    [ AppComponent ]
 })
