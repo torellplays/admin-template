@@ -14,22 +14,13 @@ export class LoginComponent {
   constructor(private loginService: LoginService) {
   }
 
-
-  isFormGroup = true;
-  isHasFeedback = true;
-  isHasError = false;
-
-  classes =  {
-    'form-group': this.isFormGroup,
-    'has-feedback': this.isHasFeedback,
-    'has-error': this.isHasError,
-  };
+  hasError = false;
 
   model = this.loginService.model;
   
   onSubmit() {
       if (this.loginService.authenticate()) {
-        this.isHasError = false;
+        this.hasError = true;
       }
   }
 }
