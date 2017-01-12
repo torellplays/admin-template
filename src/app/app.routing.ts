@@ -13,6 +13,7 @@ import { ChartjsComponent } from './pages/charts/chartjs.component';
 import { MorrisComponent } from './pages/charts/morris.component';
 import { FlotComponent } from './pages/charts/flot.component';
 import { InlineComponent } from './pages/charts/inline.component';
+import { LoginComponent } from './pages/examples/login/login.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
 { path: 'morris', component: MorrisComponent },
 { path: 'flot', component: FlotComponent },
 { path: 'inline', component: InlineComponent },
+{ path: 'login', component: LoginComponent },
 { path: '' , redirectTo: '/dashboard', pathMatch: 'full' }
 
 ];

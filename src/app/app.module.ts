@@ -1,5 +1,9 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+
+
 import { AppComponent }  from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { Dashboard2Component } from './pages/dashboard/dashboard2.component';
@@ -17,17 +21,23 @@ import { InlineComponent } from './pages/charts/inline.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { MainSidebarComponent } from './components/main-sidebar/main-sidebar.component';
+import { LoginComponent } from './pages/examples/login/login.component';
+import { LoginService } from './pages/examples/login/login.service';
+
 import { routing } from './app.routing';
 
 
+
+
 @NgModule({
-  imports:      [ BrowserModule, routing ],
+  imports:      [ BrowserModule, routing, FormsModule ],
   declarations: [ AppComponent, DashboardComponent, Dashboard2Component, WidgetsComponent,
                   DataTablesComponent, SimpleTablesComponent, TopNavComponent, BoxedComponent,
                   FixedComponent, CollapsedSidebarComponent, ChartjsComponent, MorrisComponent,
                   FlotComponent, InlineComponent, MainHeaderComponent, MainFooterComponent,
-                  MainSidebarComponent
+                  MainSidebarComponent, LoginComponent
                 ],
+  providers:    [LoginService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
