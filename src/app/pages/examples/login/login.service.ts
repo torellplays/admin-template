@@ -12,32 +12,28 @@ export class LoginService {
   constructor(public router: Router) {
   }
 
-isHasError = false;
-
-
-getUsers() {
+  getUsers() {
     return Promise.resolve(USERS);
-    }
-
-model = new User('', '', false);
-
-
-onSubmit() {
-  for (let userIdx in USERS) {
-    let user = USERS[userIdx];
-    if (user.username === this.model.username && user.password === this.model.password) {
-      this.router.navigate(['dashboard']);
-    }
   }
 
-  this.model.authErrors = true;
-  this.isHasError = true;
-}
+  model = new User('', '', false);
 
 
-log() {
-  console.log(this.model);
-}
+  authenticate() {
+    for (let userIdx in USERS) {
+      let user = USERS[userIdx];
+      if (user.username === this.model.username && user.password === this.model.password) {
+        this.router.navigate(['dashboard']);
+      }
+    }
+
+    return false;
+  }
+
+
+  log() {
+    console.log(this.model);
+  }
 
 
 

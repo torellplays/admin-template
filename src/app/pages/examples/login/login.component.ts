@@ -15,35 +15,21 @@ export class LoginComponent {
   }
 
 
-formGroup = 'form-group';
-hasFeedback = 'has-feedback';
-hasError = 'has-error';
+  isFormGroup = true;
+  isHasFeedback = true;
+  isHasError = false;
 
-isFormGroup = true;
-isHasFeedback = true;
-isHasError = this.loginService.isHasError;
-
-setClasses() {
-  let classes =  {
-    formGroup: this.isFormGroup,
-    hasFeedback: this.isHasFeedback,
-    hasError: this.isHasError,
+  classes =  {
+    'form-group': this.isFormGroup,
+    'has-feedback': this.isHasFeedback,
+    'has-error': this.isHasError,
   };
-  //console.log(classes);
 
-  return classes;
-}
-
-
-model = this.loginService.model;
-onSubmit() {
-    this.loginService.onSubmit();
-}
-
-log2() {
-  return console.log(this.model);
-}
-
-
-
+  model = this.loginService.model;
+  
+  onSubmit() {
+      if (this.loginService.authenticate()) {
+        this.isHasError = false;
+      }
+  }
 }
