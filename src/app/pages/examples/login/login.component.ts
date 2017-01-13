@@ -15,12 +15,13 @@ export class LoginComponent {
   }
 
   hasError = false;
+  isHidden = true;
 
   model = this.loginService.model;
   
   onSubmit() {
-      if (this.loginService.authenticate()) {
-        this.hasError = true;
-      }
+      this.loginService.authenticate();
+      this.hasError = this.loginService.hasError;
+      this.isHidden = this.loginService.isHidden;
   }
 }

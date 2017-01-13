@@ -18,22 +18,25 @@ export class LoginService {
 
   model = new User('', '', false);
 
+  public hasError: boolean;
+  public isHidden: boolean;
 
-  authenticate() {
+  public authenticate() {
     for (let userIdx in USERS) {
       let user = USERS[userIdx];
       if (user.username === this.model.username && user.password === this.model.password) {
         this.router.navigate(['dashboard']);
       }
+      else {
+        return [this.hasError = true, this.isHidden = false];
+      }
     }
-
-    return false;
   }
 
-
-  log() {
-    console.log(this.model);
+  check(){
+    console.log(this.hasError);
   }
+
 
 
 
