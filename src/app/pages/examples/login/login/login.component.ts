@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
-    providers: [AuthenticationService, AlertService],
+    providers: [AlertService, AuthenticationService],
     template: require('./login.component.html')
 })
 
@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private authenticationService: AuthenticationService,
         private alertService: AlertService) { }
+
+    isHidden = true;
+    hasError = false;
 
     ngOnInit() {
         // reset login status
@@ -36,7 +39,8 @@ export class LoginComponent implements OnInit {
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
-                    this.alertService.error(error);
+                      this.isHidden = false;
+                      this.hasError = true;
                     this.loading = false;
                 });
     }

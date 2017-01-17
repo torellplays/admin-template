@@ -32,13 +32,18 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
+    <div [ngClass]="{ 'alert': 1, 'alert-danger': 1, 'alert-dismissible': 1, 'hidden': isHidden}">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-ban"></i> Error</h4>
+                Email or password is invalid
+              </div>
     <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" method="post" novalidate>
-      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-        <input type="text" class="form-control" placeholder="Email"name="username" [(ngModel)]="model.username" #username="ngModel" required />
+      <div [ngClass]="{ 'form-group': 1, 'has-error': hasError}">
+        <input type="email" class="form-control" placeholder="Email" name="username" [(ngModel)]="model.username" #username="ngModel" required />
         <div *ngIf="f.submitted && !username.valid" class="help-block">Email is required</div><!-- [(ngModel)]="model.username" #name="ngModel" -->
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
-      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+      <div [ngClass]="{ 'form-group': 1, 'has-error': hasError}">
         <input type="password" class="form-control" placeholder="Password"name="password" [(ngModel)]="model.password" #password="ngModel" required />
         <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -68,7 +73,7 @@
     </div>
     <!-- /.social-auth-links -->
 
-    <a (click)="log2()">I forgot my password</a><br>
+    <a>I forgot my password</a><br>
     <a routerLink="/register" class="text-center">Register a new membership</a>
 
   </div>
