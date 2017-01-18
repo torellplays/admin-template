@@ -1,5 +1,6 @@
 import { Routes, RouterModule }  from '@angular/router';
 import { Pages } from './pages.component';
+import { AuthGuard } from '../theme/guards/index';
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
     component: Pages,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module') },
+      { path: 'dashboard', loadChildren: () => System.import('./dashboard/dashboard.module'), canActivate: [AuthGuard]},
       { path: 'editors', loadChildren: () => System.import('./editors/editors.module') },
       //{ path: 'components', loadChildren: () => System.import('./components/components.module') }
       { path: 'charts', loadChildren: () => System.import('./charts/charts.module') },

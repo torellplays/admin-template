@@ -4,6 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
+import { AuthGuard } from './theme/guards/index';
+
+
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -21,7 +24,8 @@ import { PagesModule } from './pages/pages.module';
 // Application wide providers
 const APP_PROVIDERS = [
   AppState,
-  GlobalState
+  GlobalState,
+  AuthGuard
 ];
 
 type StoreType = {

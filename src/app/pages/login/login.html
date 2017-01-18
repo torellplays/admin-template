@@ -1,39 +1,72 @@
-<div class="auth-main">
-  <div class="auth-block">
-    <h1>Sign in to ng2-admin</h1>
-    <a routerLink="/register" class="auth-link">New to ng2-admin? Sign up!</a>
-
-    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal">
-      <div class="form-group row" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
-        <div class="col-sm-10">
-          <input [formControl]="email" type="email" class="form-control" id="inputEmail3" placeholder="Email">
-        </div>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a routerLink="/dashboard2"><b>Admin</b>LTE</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+    <div [ngClass]="{ 'alert': 1, 'alert-danger': 1, 'alert-dismissible': 1, 'hidden': isHidden}">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-ban"></i> Error</h4>
+                Email or password is invalid
+              </div>
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" method="post" novalidate>
+      <div [ngClass]="{ 'form-group': 1, 'has-error': hasError}">
+        <input type="email" class="form-control" placeholder="Email" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+        <div *ngIf="f.submitted && !username.valid" class="help-block">Email is required</div><!-- [(ngModel)]="model.username" #name="ngModel" -->
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
-      <div class="form-group row" [ngClass]="{'has-error': (!password.valid && password.touched), 'has-success': (password.valid && password.touched)}">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-
-        <div class="col-sm-10">
-          <input [formControl]="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
-        </div>
+      <div [ngClass]="{ 'form-group': 1, 'has-error': hasError}">
+        <input type="password" class="form-control" placeholder="Password"name="password" [(ngModel)]="model.password" #password="ngModel" required />
+        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <div class="form-group row">
-        <div class="offset-sm-2 col-sm-10">
-          <button [disabled]="!form.valid" type="submit" class="btn btn-default btn-auth">Sign in</button>
-          <a routerLink="/login" class="forgot-pass">Forgot password?</a>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label class="">
+              <div class="icheckbox_square-blue" aria-checked="false"
+              aria-disabled="false"
+              style="position: relative;">
+                <input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;">
+                <ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;">
+                </ins></div> Remember Me
+            </label>
+          </div>
         </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" [disabled]="loading" class="btn btn-primary">Sign In</button>
+        </div>
+        <!-- /.col -->
       </div>
     </form>
 
-    <div class="auth-sep"><span><span>or Sign in with one click</span></span></div>
-
-    <div class="al-share-auth">
-      <ul class="al-share clearfix">
-        <li><i class="socicon socicon-facebook" title="Share on Facebook"></i></li>
-        <li><i class="socicon socicon-twitter" title="Share on Twitter"></i></li>
-        <li><i class="socicon socicon-google" title="Share on Google Plus"></i></li>
-      </ul>
+    <div class="social-auth-links text-center">
+      <p>- OR -</p>
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+        Facebook</a>
+      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+        Google+</a>
     </div>
+    <!-- /.social-auth-links -->
+
+    <a routerLink="/login">I forgot my password</a><br>
+    <a routerLink="/register" class="text-center">Register a new membership</a>
+
   </div>
+  <!-- /.login-box-body -->
 </div>
+<!-- /.login-box -->
+
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+</body>

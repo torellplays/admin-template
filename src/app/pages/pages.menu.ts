@@ -13,7 +13,7 @@ export const PAGES_MENU = [
             order: 0
           }
         },
-          children: [
+        children: [
             {
             path: 'dashboard1',
             data: {

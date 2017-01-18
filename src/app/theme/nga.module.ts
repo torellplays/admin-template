@@ -49,14 +49,17 @@ import {
 } from './services';
 
 import {
-  AlertService,
+  User
+} from './models';
+
+import {
   AuthenticationService,
   UserService
-} from './services/import';
+} from './services';
 
 import {
   fakeBackendProvider
-} from './services/_helpers/index';
+} from './helpers';
 
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
@@ -100,7 +103,6 @@ const NGA_SERVICES = [
   BaThemePreloader,
   BaThemeSpinner,
   BaMenuService,
-  AlertService,
   AuthenticationService,
   UserService,
   fakeBackendProvider,
