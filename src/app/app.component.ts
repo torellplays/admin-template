@@ -16,12 +16,12 @@ import { MENU } from './app.menu';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('normalize.css'), require('./app.scss')],
+  // styles: [require('normalize.css'), require('./app.scss')],
   template: `
-    <main [ngClass]="{'menu-collapsed': isMenuCollapsed}" baThemeRun>
-      <div class="additional-bg"></div>
+    <!-- <main [ngClass]="{'menu-collapsed': isMenuCollapsed}" >
+      <div class="additional-bg"></div> -->
       <router-outlet></router-outlet>
-    </main>
+  <!--  </main> -->
   `
 })
 export class App {

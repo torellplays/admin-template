@@ -7,7 +7,7 @@ import {
   BaThemeConfig
 } from './theme.config';
 
-import {
+ import {
   BaThemeConfigProvider
 } from './theme.configProvider';
 
@@ -32,8 +32,7 @@ import { BaCardBlur } from './components/baCard/baCardBlur.directive';
 
 import {
   BaScrollPosition,
-  BaSlimScroll,
-  BaThemeRun
+  BaSlimScroll
 } from './directives';
 
 import {
@@ -48,6 +47,19 @@ import {
   BaThemePreloader,
   BaThemeSpinner
 } from './services';
+
+import {
+  AlertService,
+  AuthenticationService,
+  UserService
+} from './services/import';
+
+import {
+  fakeBackendProvider
+} from './services/_helpers/index';
+
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
 
 import {
   EmailValidator,
@@ -74,7 +86,6 @@ const NGA_COMPONENTS = [
 const NGA_DIRECTIVES = [
   BaScrollPosition,
   BaSlimScroll,
-  BaThemeRun,
   BaCardBlur
 ];
 
@@ -88,7 +99,13 @@ const NGA_SERVICES = [
   BaImageLoaderService,
   BaThemePreloader,
   BaThemeSpinner,
-  BaMenuService
+  BaMenuService,
+  AlertService,
+  AuthenticationService,
+  UserService,
+  fakeBackendProvider,
+        MockBackend,
+        BaseRequestOptions
 ];
 
 const NGA_VALIDATORS = [

@@ -3,17 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <title><%= htmlWebpackPlugin.options.title %></title>
-
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../../assets/dist/css/skins/_all-skins.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="assets/plugins/iCheck/square/blue.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.description %>">
 
   <% if (webpackConfig.htmlElements.headTags) { %>
   <!-- Configured Head Tags  -->
   <%= webpackConfig.htmlElements.headTags %>
   <% } %>
-
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
   <!-- base url -->
   <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
 
@@ -32,7 +50,12 @@
 <!-- Webpack Dev Server reload -->
 <script src="/webpack-dev-server.js"></script>
 <% } %>
-
+<!-- jQuery 2.2.3 -->
+<script src="assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="assets/plugins/iCheck/icheck.min.js"></script>
 <link
   href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic'
   rel='stylesheet' type='text/css'>
