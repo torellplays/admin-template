@@ -7,7 +7,7 @@ export const PAGES_MENU = [
         data: {
           menu: {
             title: 'Dashboard',
-            icon: 'ion-android-home',
+            icon: 'fa fa-dashboard',
             selected: false,
             expanded: false,
             order: 0
@@ -15,10 +15,10 @@ export const PAGES_MENU = [
         },
         children: [
             {
-            path: 'dashboard1',
+            path: 'dashboard',
             data: {
               menu: {
-                title: 'dashboard1',
+                title: 'Dashboard v1',
               }
             }
             },
@@ -26,7 +26,7 @@ export const PAGES_MENU = [
               path: 'dashboard2',
               data: {
                 menu: {
-                  title: 'dashboard2',
+                  title: 'Dashboard v2',
                 }
               }
             }
@@ -37,7 +37,7 @@ export const PAGES_MENU = [
         data: {
           menu: {
             title: 'Tables',
-            icon: 'ion-grid',
+            icon: 'fa fa-table',
             selected: false,
             expanded: false,
             order: 500,
@@ -45,18 +45,18 @@ export const PAGES_MENU = [
         },
         children: [
           {
-            path: 'basictables',
+            path: 'simpletables',
             data: {
               menu: {
-                title: 'Basic Tables',
+                title: 'Simple Tables',
               }
             }
           },
           {
-            path: 'smarttables',
+            path: 'datatables',
             data: {
               menu: {
-                title: 'Smart Tables',
+                title: 'Data Tables',
               }
             }
           }

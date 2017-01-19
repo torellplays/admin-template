@@ -16,7 +16,6 @@ import { MENU } from './app.menu';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  // styles: [require('normalize.css'), require('./app.scss')],
   template: `
     <!-- <main [ngClass]="{'menu-collapsed': isMenuCollapsed}" >
       <div class="additional-bg"></div> -->

@@ -5,7 +5,7 @@ import {layoutSizes} from '../../../theme';
 @Component({
   selector: 'ba-sidebar',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./baSidebar.scss')],
+  // styles: [require('./baSidebar.scss')],
   template: require('./baSidebar.html')
 })
 export class BaSidebar {

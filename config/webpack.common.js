@@ -9,7 +9,7 @@ const helpers = require('./helpers');
 const AssetsPlugin = require('assets-webpack-plugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+//const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -245,10 +245,10 @@ module.exports = function (options) {
        *
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
-      new CopyWebpackPlugin([
-        { from: 'src/assets', to: 'assets' },
-        { from: 'src/meta'}
-      ]),
+      //new CopyWebpackPlugin([
+      //  { from: 'src/assets', to: 'assets' },
+      //  { from: 'src/meta'}
+      //]),
 
       /*
        * Plugin: HtmlWebpackPlugin

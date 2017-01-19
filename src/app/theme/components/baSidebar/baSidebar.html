@@ -1,5 +1,17 @@
-<aside class="al-sidebar" (mouseleave)="hoverElemTop=outOfArea" sidebarResize>
-  <ba-menu [menuHeight]="menuHeight"
+<aside class="main-sidebar" (mouseleave)="hoverElemTop=outOfArea" sidebarResize>
+
+  <!--    <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form> -->
+
+    <user-panel></user-panel>
+<!--  <ba-menu [menuHeight]="menuHeight"
            [sidebarCollapsed]="isMenuCollapsed"
-           (expandMenu)="menuExpand()"></ba-menu>
+           (expandMenu)="menuExpand()"></ba-menu> -->
 </aside>

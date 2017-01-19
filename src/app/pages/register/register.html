@@ -20,7 +20,7 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-        <input type="text" class="form-control" name="email"
+        <input type="email" class="form-control" name="email"
          [(ngModel)]="model.username" #username="ngModel" placeholder="Email" required>
          <div *ngIf="f.submitted && !username.valid" class="help-block">Email is required</div>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
