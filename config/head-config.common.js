@@ -34,10 +34,5 @@ module.exports = {
     { rel: 'icon', type: 'image/png', sizes: '96x96', href: 'assets/icon/favicon-96x96.png' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'assets/icon/favicon-16x16.png' }
 
-  ],
-  meta: [
-    { name: 'msapplication-TileColor', content: '#ffffff' },
-    { name: 'msapplication-TileImage', content: 'assets/icon/ms-icon-144x144.png', '=content': true },
-    { name: 'theme-color', content: '#4691d1' }
   ]
 };
