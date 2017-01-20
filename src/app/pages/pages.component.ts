@@ -5,8 +5,8 @@ import {Component, ViewEncapsulation} from '@angular/core';
   styles: [require('../../assets/dist/css/skins/_all-skins.min.css')],
   template: `
       <ba-sidebar></ba-sidebar>
-    <!-- // <ba-page-top></ba-page-top>
-    // <div class="al-main">
+      <ba-page-top></ba-page-top>
+    <!-- <div class="al-main">
     //  <div class="al-content">
     //    <ba-content-top></ba-content-top> -->
         <router-outlet></router-outlet>
