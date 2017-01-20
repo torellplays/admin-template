@@ -4,7 +4,7 @@ import {Component, ViewEncapsulation, Input, Output, EventEmitter} from '@angula
   selector: 'user-panel',
   encapsulation: ViewEncapsulation.None,
   //styles: [require('./baMenuItem.scss')],
-  template: require('./user-panel.html')
+  template: require('./userPanel.html')
 })
 export class UserPanel {
 }

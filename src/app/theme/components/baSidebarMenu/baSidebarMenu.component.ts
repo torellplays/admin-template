@@ -3,11 +3,12 @@ import {GlobalState} from '../../../global.state';
 import {layoutSizes} from '../../../theme';
 
 @Component({
-  selector: 'ba-sidebar',
+  selector: 'ba-sidebar-menu',
+  encapsulation: ViewEncapsulation.None,
   // styles: [require('./baSidebar.scss')],
-  template: require('./baSidebar.html')
+  template: require('./baSidebarMenu.html')
 })
-export class BaSidebar {
+export class BaSidebarMenu {
   public menuHeight:number;
   public isMenuCollapsed:boolean = false;
   public isMenuShouldCollapsed:boolean = false;
