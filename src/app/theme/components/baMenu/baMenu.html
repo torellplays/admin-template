@@ -1,8 +1,7 @@
-<ul id="main-sidebar-list" class="sidebar-menu" >
-    <ba-menu-item
+<ul  class="sidebar-menu" >
+<li class="header">MAIN NAVIGATION</li>
+   <ba-menu-item
       [menuItem]="item"
       (toggleSubMenu)="toggleSubMenu($event)"
-      *ngFor="let item of menuItems"></ba-menu-item>
+      *ngFor="let item of menuItems"></ba-menu-item>  
   </ul>
-  <div class="sidebar-hover-elem" [ngStyle]="{top: hoverElemTop + 'px', height: hoverElemHeight + 'px'}"
-       [ngClass]="{'show-hover-elem': showHoverElem }"></div>
