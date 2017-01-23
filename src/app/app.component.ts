@@ -17,7 +17,7 @@ import { MENU } from './app.menu';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   template: `
-    <!-- <main [ngClass]="{'menu-collapsed': isMenuCollapsed}" >
+    <!-- <main [ngClass]="{'menu-collapsed': isMenuCollapsed}" -->
     <!--  <div class="additional-bg"></div> -->
       <router-outlet></router-outlet>
   <!--  </main> -->

@@ -17,11 +17,11 @@
   </a>
 
   <ul *ngIf="menuItem.children" class="treeview-menu.menu-open" [ngClass]="{'slide-right': menuItem.slideRight}">
-     <li> <ba-menu-item [menuItem]="subItem"
+    <ba-menu-item [menuItem]="subItem"
                   [child]="true"
                   (itemHover)="onHoverItem($event)"
-                  (toggleSubMenu)="onToggleSubMenu($event, subItem)"
-                  *ngFor="let subItem of menuItem.children"></ba-menu-item>  </li>
+                  (tggleSubMenu)="onToggleSubMenu($event, subItem)"
+                  *ngFor="let subItem of menuItem.children"></ba-menu-item>
   </ul>
 
 </li>

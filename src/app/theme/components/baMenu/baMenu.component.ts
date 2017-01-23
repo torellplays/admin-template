@@ -13,10 +13,30 @@ import {GlobalState} from '../../../global.state';
 })
 export class BaMenu {
 
+@Input() menuItem:any;
+@Input() child:boolean = false;
+
+@Output() itemHover = new EventEmitter<any>();
+@Output() tggleSubMenu = new EventEmitter<any>();
+
+public onHoverItem($event):void {
+  this.itemHover.emit($event);
+}
+
+public onToggleSubMenu($event, item):boolean {
+  $event.item = item;
+  this.tggleSubMenu.emit($event);
+  return false;
+}
+
+
+
   @Input() sidebarCollapsed:boolean = false;
   @Input() menuHeight:number;
 
   @Output() expandMenu = new EventEmitter<any>();
+
+
 
   public menuItems: any[];
   protected _menuItemsSub: Subscription;
