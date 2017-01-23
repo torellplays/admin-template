@@ -5,17 +5,17 @@ import { NgaModule } from '../../theme/nga.module';
 
 import { routing }       from './tables.routing';
 import { Tables } from './tables.component';
-import { BasicTables } from './components/basicTables/basicTables.component';
-import { SmartTables } from './components/smartTables/smartTables.component';
+import { SimpleTables } from './components/simpleTables/simpleTables.component';
+import { DataTables } from './components/dataTables/dataTables.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { BasicTablesService } from './components/basicTables/basicTables.service';
-import { ResponsiveTable } from './components/basicTables/components/responsiveTable';
-import { StripedTable } from './components/basicTables/components/stripedTable';
-import { BorderedTable } from './components/basicTables/components/borderedTable';
-import { HoverTable } from './components/basicTables/components/hoverTable';
-import { CondensedTable } from './components/basicTables/components/condensedTable';
-import { ContextualTable } from './components/basicTables/components/contextualTable';
-import { SmartTablesService } from './components/smartTables/smartTables.service';
+import { SimpleTablesService } from './components/simpleTables/simpleTables.service';
+import { ResponsiveTable } from './components/simpleTables/components/responsiveTable';
+import { StripedTable } from './components/simpleTables/components/stripedTable';
+import { BorderedTable } from './components/simpleTables/components/borderedTable';
+import { HoverTable } from './components/simpleTables/components/hoverTable';
+import { CondensedTable } from './components/simpleTables/components/condensedTable';
+import { ContextualTable } from './components/simpleTables/components/contextualTable';
+import { DataTablesService } from './components/dataTables/dataTables.service';
 
 
 @NgModule({
@@ -28,8 +28,8 @@ import { SmartTablesService } from './components/smartTables/smartTables.service
   ],
   declarations: [
     Tables,
-    BasicTables,
-    SmartTables,
+    SimpleTables,
+    DataTables,
     HoverTable,
     BorderedTable,
     CondensedTable,
@@ -38,8 +38,8 @@ import { SmartTablesService } from './components/smartTables/smartTables.service
     ResponsiveTable
   ],
   providers: [
-    BasicTablesService,
-    SmartTablesService
+    SimpleTablesService,
+    DataTablesService
   ]
 })
 export default class TablesModule {}
