@@ -66,8 +66,8 @@ export const PAGES_MENU = [
         path: '',
         data: {
           menu: {
-            title: 'Pages',
-            icon: 'ion-document',
+            title: 'Examples',
+            icon: 'fa fa-folder',
             selected: false,
             expanded: false,
             order: 650,

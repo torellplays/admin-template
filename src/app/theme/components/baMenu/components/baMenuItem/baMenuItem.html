@@ -1,16 +1,16 @@
-<ul  class="sidebar-menu" >
-<li *ngIf="!menuItem.hidden" [title]="menuItem.title" [ngClass]="{'treeview': 1}">
+<ul  class="sidebar-menu">
+<li *ngIf="!menuItem.hidden" [title]="menuItem.title" [ngClass]="{'treeview': !child, ' ': child, 'selected': menuItem.selected && !menuItem.expanded, 'with-sub-menu': menuItem.children }">
 
- <a *ngIf="!menuItem.children && !menuItem.url" (mouseenter)="onHoverItem($event, item)" [routerLink]="menuItem.route.paths">
+ <a *ngIf="!menuItem.children && !menuItem.url" (mouseenter)="onHoverItem($event, item)" [routerLink]="menuItem.route.paths" class="treeview">
     <i *ngIf="menuItem.icon" class="{{ menuItem.icon }}"></i><span><i class="fa fa-circle-o"></i>{{ menuItem.title }}</span>
   </a>
 
-  <a *ngIf="!menuItem.children && menuItem.url" (mouseenter)="onHoverItem($event, item)" [href]="menuItem.url" [target]="menuItem.target" >
+  <a *ngIf="!menuItem.children && menuItem.url" (mouseenter)="onHoverItem($event, item)" [href]="menuItem.url" [target]="menuItem.target" class="treeview" >
     <i *ngIf="menuItem.icon" class="{{ menuItem.icon }}"></i><span>{{ menuItem.title }}</span>
     <b class="fa fa-angle-down" [ngClass]="{'fa-angle-up': menuItem.expanded}"></b>
   </a>
 
- <a *ngIf="menuItem.children" (mouseenter)="onHoverItem($event, item)" href (click)="onToggleSubMenu($event, menuItem)" >
+ <a *ngIf="menuItem.children" (mouseenter)="onHoverItem($event, item)" href (click)="onToggleSubMenu($event, menuItem)" class="treeview">
     <i *ngIf="menuItem.icon" class="{{ menuItem.icon }}"></i><span>{{ menuItem.title }}</span>
     <b class="fa fa-angle-down" [ngClass]="{'fa-angle-up': menuItem.expanded}"></b>
   </a>
@@ -18,10 +18,10 @@
   <ul *ngIf="menuItem.children" class="treeview-menu menu-open" [ngClass]="{'slide-right': menuItem.slideRight}">
       <ba-menu-item [menuItem]="subItem"
                   [child]="true"
-                  (itemHover)="onHoverItem($event)"
+
                   (tggleSubMenu)="onToggleSubMenu($event, subItem)"
-                  *ngFor="let subItem of menuItem.children"></ba-menu-item>
+                  *ngFor="let subItem of menuItem.children" class=""></ba-menu-item>
   </ul>
 
 </li>
-  </ul>
+</ul>
