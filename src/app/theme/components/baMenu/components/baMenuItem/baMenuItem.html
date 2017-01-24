@@ -1,5 +1,4 @@
-
-
+<ul  class="sidebar-menu" >
 <li *ngIf="!menuItem.hidden" [title]="menuItem.title" [ngClass]="{'treeview': 1}">
 
  <a *ngIf="!menuItem.children && !menuItem.url" (mouseenter)="onHoverItem($event, item)" [routerLink]="menuItem.route.paths">
@@ -16,8 +15,8 @@
     <b class="fa fa-angle-down" [ngClass]="{'fa-angle-up': menuItem.expanded}"></b>
   </a>
 
-  <ul *ngIf="menuItem.children" class="treeview-menu.menu-open" [ngClass]="{'slide-right': menuItem.slideRight}">
-    <ba-menu-item [menuItem]="subItem"
+  <ul *ngIf="menuItem.children" class="treeview" [ngClass]="{'slide-right': menuItem.slideRight}">
+      <ba-menu-item [menuItem]="subItem"
                   [child]="true"
                   (itemHover)="onHoverItem($event)"
                   (tggleSubMenu)="onToggleSubMenu($event, subItem)"
@@ -25,3 +24,4 @@
   </ul>
 
 </li>
+  </ul>
