@@ -15,7 +15,7 @@
     <b class="fa fa-angle-down" [ngClass]="{'fa-angle-up': menuItem.expanded}"></b>
   </a>
 
-  <ul *ngIf="menuItem.children" class="treeview" [ngClass]="{'slide-right': menuItem.slideRight}">
+  <ul *ngIf="menuItem.children" class="treeview-menu menu-open" [ngClass]="{'slide-right': menuItem.slideRight}">
       <ba-menu-item [menuItem]="subItem"
                   [child]="true"
                   (itemHover)="onHoverItem($event)"
