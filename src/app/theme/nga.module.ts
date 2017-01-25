@@ -27,7 +27,8 @@ import {
   BaPictureUploader,
   BaSidebarMenu,
   BaSidebar,
-  UserPanel
+  UserPanel,
+  BaFooter
 } from './components';
 
 import { BaCardBlur } from './components/baCard/baCardBlur.directive';
@@ -87,7 +88,8 @@ const NGA_COMPONENTS = [
   BaPictureUploader,
   BaSidebarMenu,
   BaSidebar,
-  UserPanel
+  UserPanel,
+  BaFooter
 ];
 
 const NGA_DIRECTIVES = [
