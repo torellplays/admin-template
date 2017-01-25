@@ -6,7 +6,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'simple-tables',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./dataTables.scss')],
+  //styles: [require('./dataTables.scss')],
   template: require('./dataTables.html')
 })
 export class DataTables {
@@ -15,17 +15,17 @@ export class DataTables {
 
   settings = {
     add: {
-      addButtonContent: '<i class="ion-ios-plus-outline"></i>',
-      createButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
+      addButtonContent: '<i class="fa fa-plus"></i>',
+      createButtonContent: '<i class="fa fa-check"></i>',
+      cancelButtonContent: '<i class="fa fa-close"></i>',
     },
     edit: {
-      editButtonContent: '<i class="ion-edit"></i>',
-      saveButtonContent: '<i class="ion-checkmark"></i>',
-      cancelButtonContent: '<i class="ion-close"></i>',
+      editButtonContent: '<i class="fa fa-pencil"></i>',
+      saveButtonContent: '<i class="fa fa-check"></i>',
+      cancelButtonContent: '<i class="fa fa-close"></i>',
     },
     delete: {
-      deleteButtonContent: '<i class="ion-trash-a"></i>',
+      deleteButtonContent: '<i class="fa fa-trash"></i>',
       confirmDelete: true
     },
     columns: {

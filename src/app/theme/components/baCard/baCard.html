@@ -1,18 +1,6 @@
 <div baCardBlur class="animated fadeIn card {{cardType}} {{baCardClass || ''}}" zoom-in>
-  <div class="content-wrapper" style="min-height: 916px;">
-  <section class="content">
-    <div class="row">
-  <div class="col-xs-12">
-          <div class="box">
-    <div *ngIf="title" class="box-header">
-        <h3 class="box-title">{{title}}</h3>
-    </div>
-    <div class="box-body">
+
+
         <ng-content></ng-content>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-</div>
+  
 </div>
