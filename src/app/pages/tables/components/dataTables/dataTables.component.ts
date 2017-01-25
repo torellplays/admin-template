@@ -34,11 +34,7 @@ export class DataTables {
         type: 'number'
       },
       firstName: {
-        title: 'First Name',
-        type: 'string'
-      },
-      lastName: {
-        title: 'Last Name',
+        title: 'Full name',
         type: 'string'
       },
       username: {
@@ -48,10 +44,6 @@ export class DataTables {
       email: {
         title: 'E-mail',
         type: 'string'
-      },
-      age: {
-        title: 'Age',
-        type: 'number'
       }
     }
   };
