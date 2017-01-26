@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation, Input, Output, EventEmitter} from '@angular/core';
+import { BaMenuSubItem } from '../baMenuSubItem';
 
 @Component({
   selector: 'ba-menu-item',
