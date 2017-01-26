@@ -66,8 +66,8 @@ export const PAGES_MENU = [
         path: '',
         data: {
           menu: {
-            title: 'Examples',
-            icon: 'fa fa-folder',
+            title: 'Account',
+            icon: 'fa fa-desktop',
             selected: false,
             expanded: false,
             order: 650,
