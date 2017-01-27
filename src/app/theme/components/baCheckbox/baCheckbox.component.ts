@@ -3,7 +3,7 @@ import {ControlValueAccessor, NgModel} from '@angular/forms';
 
 @Component({
   selector: 'ba-checkbox[ngModel]',
-  styles: [require('./baCheckbox.scss')],
+  //styles: [require('./baCheckbox.scss')],
   template: require('./baCheckbox.html')
 })
 export class BaCheckbox implements ControlValueAccessor {

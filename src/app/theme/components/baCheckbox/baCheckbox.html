@@ -1,8 +1,20 @@
-<div class="{{baCheckboxClass}}">
-  <label class="checkbox-inline custom-checkbox nowrap">
-    <input type="checkbox" [checked]=state
+<div class="row">
+  <div class="col-xs-8">
+<div class="checkbox icheck">
+    <label [ngClass]="{'hover':isActive}" (mouseenter)="isActive=true" (mouseleave)="isActive=false">
+        <div [ngClass]="{ 'icheckbox_square-blue': 1, 'checked': state, 'hover': isActive}" (mouseenter)="isActive=true" (mouseleave)="isActive=false"
+            aria-checked="false" aria-disabled="false" style="position: relative;">
+            <input
+            [checked]=state
            (change)="onChange($event.target.checked)"
+            style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%;
+            margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"
+            type="checkbox"
            [disabled]="disabled" [value]="value">
-    <span>{{label}}</span>
-  </label>
-</div>
+            <ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%;
+            height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+        </div> I agree to the <a href="#">terms</a>
+    </label>
+          </div>
+        </div>
+      </div>
