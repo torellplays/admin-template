@@ -12,20 +12,14 @@ import {
 } from './theme.configProvider';
 
 import {
-  BaAmChart,
-  BaBackTop,
   BaCard,
-  BaChartistChart,
   BaCheckbox,
-  BaContentTop,
   BaFullCalendar,
   BaMenuItem,
   BaMenu,
   BaMsgCenter,
   BaMultiCheckbox,
   BaPageTop,
-  BaPictureUploader,
-  BaSidebarMenu,
   BaSidebar,
   UserPanel,
   BaFooter
@@ -73,20 +67,14 @@ import {
 } from './validators';
 
 const NGA_COMPONENTS = [
-  BaAmChart,
-  BaBackTop,
   BaCard,
-  BaChartistChart,
   BaCheckbox,
-  BaContentTop,
   BaFullCalendar,
   BaMenuItem,
   BaMenu,
   BaMsgCenter,
   BaMultiCheckbox,
   BaPageTop,
-  BaPictureUploader,
-  BaSidebarMenu,
   BaSidebar,
   UserPanel,
   BaFooter
