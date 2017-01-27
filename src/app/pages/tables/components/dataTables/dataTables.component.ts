@@ -29,16 +29,8 @@ export class DataTables {
       confirmDelete: true
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number'
-      },
       firstName: {
         title: 'Full name',
-        type: 'string'
-      },
-      username: {
-        title: 'Username',
         type: 'string'
       },
       email: {

@@ -15,4 +15,3 @@ export * from './baCheckbox';
 export * from './baMultiCheckbox';
 export * from './UserPanel';
 export * from './baFooter';
-export * from './baMenu/components/baMenuSubItem';
