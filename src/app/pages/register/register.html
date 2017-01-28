@@ -13,16 +13,16 @@
                 Email or password is invalid
               </div>
     <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate method="post">
-      <div class="form-group has-feedback" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+      <div class="form-group has-feedback" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
         <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName"
         #firstName="ngModel" placeholder="Full name" required>
         <div *ngIf="f.submitted && !firstName.valid" class="help-block">Full name is required</div>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
-      <div class="form-group has-feedback" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+      <div class="form-group has-feedback" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
         <input type="email" class="form-control" name="email"
-         [(ngModel)]="model.username" #username="ngModel" placeholder="Email" required>
-         <div *ngIf="f.submitted && !username.valid" class="help-block">Email is required</div>
+         [(ngModel)]="model.email" #email="ngModel" placeholder="Email" required>
+         <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
