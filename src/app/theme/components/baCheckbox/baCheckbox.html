@@ -1,6 +1,5 @@
 
-<div class="row">
-  <div class="col-xs-8">
+
 <div class="checkbox icheck">
     <label [ngClass]="{'hover':isActive}" (mouseenter)="isActive=true" (mouseleave)="isActive=false">
         <div [ngClass]="{ 'icheckbox_square-blue': 1, 'checked': state, 'hover': isActive}" (mouseenter)="isActive=true" (mouseleave)="isActive=false"
@@ -11,11 +10,9 @@
             style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%;
             margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"
             type="checkbox"
-           [disabled]="disabled" [value]="value">
+           [disabled]="disabled" [value]="value" [title]="title">
             <ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%;
             height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
-        </div> I agree to the <a href="#">terms</a>
+        </div> {{title}}
     </label>
           </div>
-        </div>
-      </div>
