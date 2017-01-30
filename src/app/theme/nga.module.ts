@@ -25,6 +25,8 @@ import {
   BaFooter
 } from './components';
 
+import { Ng2SmartTableModule } from './components/ng2-smart-table';
+
 import { BaCardBlur } from './components/baCard/baCardBlur.directive';
 
 import {

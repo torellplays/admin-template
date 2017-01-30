@@ -5,7 +5,6 @@ import { UserService } from '../../services';
 @Component({
   selector: 'user-panel',
   encapsulation: ViewEncapsulation.None,
-  //styles: [require('./baMenuItem.scss')],
   template: require('./userPanel.html')
 })
 export class UserPanel implements OnInit{
