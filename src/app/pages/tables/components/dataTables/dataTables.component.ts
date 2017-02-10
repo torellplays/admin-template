@@ -1,17 +1,16 @@
-import {Component, ViewEncapsulation, OnInit} from '@angular/core';
-import { User } from '../../../../theme/models/index';
-import { UserService } from '../../../../theme/services';
+import {Component, ViewEncapsulation} from '@angular/core';
 import { DataTablesService } from './dataTables.service';
 import { LocalDataSource } from '../../../../theme/components/ng2-smart-table';
+import {SearchTableComponent} from 'ng2-search-table/ng2-search-table';
+import {TextFilterComponent} from 'ng2-search-table/ng2-search-table';
 
 @Component({
   selector: 'simple-tables',
   encapsulation: ViewEncapsulation.None,
   template: require('./dataTables.html')
 })
-export class DataTables implements OnInit{
-  currentUser: User;
-  users: User[] = [];
+export class DataTables {
+
   query: string = '';
 
   settings = {
@@ -51,22 +50,11 @@ export class DataTables implements OnInit{
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(protected service: DataTablesService, private userService: UserService) {
+  constructor(protected service: DataTablesService) {
     this.service.getData().then((data) => {
       this.source.load(data);
     });
   }
-  ngOnInit() {
-        this.loadAllUsers();
-    }
-
-    deleteUser(id: number) {
-        this.userService.delete(id).subscribe(() => { this.loadAllUsers() });
-    }
-
-    private loadAllUsers() {
-        this.userService.getAll().subscribe(users => { this.users = users; });
-    }
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
@@ -75,4 +63,5 @@ export class DataTables implements OnInit{
       event.confirm.reject();
     }
   }
+
 }

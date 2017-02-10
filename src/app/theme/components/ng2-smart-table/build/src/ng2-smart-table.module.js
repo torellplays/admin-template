@@ -7,6 +7,7 @@ var cell_component_1 = require('./ng2-smart-table/components/cell/cell.component
 var filter_component_1 = require('./ng2-smart-table/components/filter/filter.component');
 var pager_component_1 = require('./ng2-smart-table/components/pager/pager.component');
 var title_component_1 = require('./ng2-smart-table/components/title/title.component');
+var search_pipe_1 = require('../../../../pipes/search/search.pipe');
 var Ng2SmartTableModule = (function () {
     function Ng2SmartTableModule() {
     }
@@ -20,10 +21,11 @@ var Ng2SmartTableModule = (function () {
                 cell_component_1.CellComponent,
                 filter_component_1.FilterComponent,
                 pager_component_1.PagerComponent,
+                search_pipe_1.SearchPipe,
                 title_component_1.TitleComponent
             ].concat(ng2_smart_table_directives_1.NG2_SMART_TABLE_DIRECTIVES),
             exports: ng2_smart_table_directives_1.NG2_SMART_TABLE_DIRECTIVES.slice()
-        }), 
+        }),
         __metadata('design:paramtypes', [])
     ], Ng2SmartTableModule);
     return Ng2SmartTableModule;

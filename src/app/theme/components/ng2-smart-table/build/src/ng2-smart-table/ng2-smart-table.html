@@ -1,5 +1,20 @@
-
+<div class="box-body">
+<div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
   <div class="row">
+    <div class="col-sm-6">
+      <div class="dataTables_length" id="example1_length">
+        <label>Show
+          <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select> entries
+        </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
   <div class="col-sm-12">
   <table id="example2" class="table table-bordered table-hover dataTable" role="grid">
     <thead *ngIf="!grid.getSetting('hideHeader') || !grid.getSetting('hideSubHeader')">
@@ -36,7 +51,7 @@
 
     </thead>
 
-    <tbody>
+    <tbody >
 
     <tr *ngFor="let row of grid.getRows()" (click)="onUserSelectRow(row)" class="ng2-smart-filters" [ngClass]="{selected: row.isSelected}">
       <td *ngIf="!row.isInEditing && grid.showActionColumn()" class="ng2-smart-actions">
@@ -57,7 +72,7 @@
       <td [attr.colspan]="grid.getColumns().length + (grid.getSetting('actions.add') || grid.getSetting('actions.edit') || grid.getSetting('actions.delete'))">{{ grid.getSetting('noDataMessage') }}</td>
     </tr>
 
-    </tbody>
-  </table>  </div></div>
+  </tbody>
+</table>  </div></div></div></div>
 
   <ng2-smart-table-pager *ngIf="grid.getSetting('pager.display')" [source]="source" [perPage]="grid.getSetting('pager.perPage')"></ng2-smart-table-pager>

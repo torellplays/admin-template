@@ -45,14 +45,6 @@ export const PAGES_MENU = [
         },
         children: [
           {
-            path: 'simpletables',
-            data: {
-              menu: {
-                title: 'Simple Tables',
-              }
-            }
-          },
-          {
             path: 'datatables',
             data: {
               menu: {
