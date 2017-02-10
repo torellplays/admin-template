@@ -22,8 +22,8 @@
     </div>
   </div>
   <div class="row">
-  <div class="col-sm-12">
-  <table id="example2" class="table table-bordered table-hover dataTable" role="grid">
+    <div class="col-sm-12">
+      <table id="example2" class="table table-bordered table-hover dataTable" role="grid">
     <thead *ngIf="!grid.getSetting('hideHeader') || !grid.getSetting('hideSubHeader')">
 
     <tr role="row" *ngIf="!grid.getSetting('hideHeader')">
@@ -80,6 +80,9 @@
     </tr>
 
   </tbody>
-</table>  </div></div></div></div>
-
-  <ng2-smart-table-pager *ngIf="grid.getSetting('pager.display')" [source]="source" [perPage]="grid.getSetting('pager.perPage')"></ng2-smart-table-pager>
+      </table>  </div></div>
+  <div class="row">
+<ng2-smart-table-pager *ngIf="grid.getSetting('pager.display')" [source]="source" [perPage]="grid.getSetting('pager.perPage')"></ng2-smart-table-pager>
+  </div>
+</div>
+</div>
