@@ -7,7 +7,8 @@ import {TextFilterComponent} from 'ng2-search-table/ng2-search-table';
 @Component({
   selector: 'simple-tables',
   encapsulation: ViewEncapsulation.None,
-  template: require('./dataTables.html')
+  template: require('./dataTables.html'),
+  styles: [String(require('../../../../../assets/plugins/datatables/dataTables.bootstrap.css'))]
 })
 export class DataTables {
 

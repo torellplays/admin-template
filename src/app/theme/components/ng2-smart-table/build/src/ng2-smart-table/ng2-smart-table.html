@@ -13,8 +13,15 @@
         </label>
         </div>
       </div>
+    <div class="col-sm-6">
+      <div id="example1_filter" class="dataTables_filter">
+        <label>Search:
+          <input type="search" class="form-control input-sm" placeholder="" aria-controls="example1">
+        </label>
+      </div>
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
   <div class="col-sm-12">
   <table id="example2" class="table table-bordered table-hover dataTable" role="grid">
     <thead *ngIf="!grid.getSetting('hideHeader') || !grid.getSetting('hideSubHeader')">
