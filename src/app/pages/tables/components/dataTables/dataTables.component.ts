@@ -35,16 +35,24 @@ export class DataTables {
         type: 'number'
       },
       firstName: {
-        title: 'Full name',
+        title: 'First Name',
         type: 'string'
+      },
+      lastName: {
+        title: 'Last Name',
+        type: 'string',
+      },
+      username: {
+        title: 'Username',
+        type: 'string',
       },
       email: {
         title: 'E-mail',
         type: 'string'
       },
-      password: {
-        title: 'Password',
-        type: 'string'
+      age: {
+        title: 'Age',
+        type: 'number'
       }
     }
   };
