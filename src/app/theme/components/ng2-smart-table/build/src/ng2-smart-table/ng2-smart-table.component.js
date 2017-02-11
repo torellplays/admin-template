@@ -1,8 +1,9 @@
 "use strict";
 var core_1 = require('@angular/core');
-var grid_1 = require('./lib/grid');
 var data_source_1 = require('./lib/data-source/data-source');
+var grid_1 = require('./lib/grid');
 var helpers_1 = require('./lib/helpers');
+var title_component_1 = require('./components/title/title.component');
 var local_data_source_1 = require('./lib/data-source/local/local.data-source');
 var Ng2SmartTableComponent = (function () {
     function Ng2SmartTableComponent() {
@@ -57,7 +58,8 @@ var Ng2SmartTableComponent = (function () {
                 perPage: 10
             }
         };
-    }
+        this.currentDirection = 'sorting';
+          }
     Ng2SmartTableComponent.prototype.ngOnChanges = function (changes) {
         if (this.grid) {
             if (changes['settings']) {
@@ -196,7 +198,7 @@ var Ng2SmartTableComponent = (function () {
     Ng2SmartTableComponent = __decorate([
         core_1.Component({
             selector: 'ng2-smart-table',
-            styles: [require('./ng2-smart-table.scss')],
+            styles: [require('./ng2-smart-table.scss'), require('./components/title/title.scss')],
             template: require('./ng2-smart-table.html')
         }),
         __metadata('design:paramtypes', [])

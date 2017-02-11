@@ -40,7 +40,7 @@ var Column = (function () {
         return this.settings['type'] || this.determineType();
     };
     Column.prototype.prepareSortDirection = function () {
-        return this.settings['sort'] === 'desc' ? 'desc' : 'asc';
+        return this.settings['sorting'] === 'desc' ? 'desc' : 'asc';
     };
     Column.prototype.determineType = function () {
         // TODO: determine type by data

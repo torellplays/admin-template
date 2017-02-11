@@ -30,7 +30,7 @@
       <th *ngIf="grid.showActionColumn()" >
         {{ grid.getSetting('actions.columnTitle') }}
       </th>
-      <th *ngFor="let column of grid.getColumns()" >
+      <th [ngClass]="currentDirection" *ngFor="let column of grid.getColumns()" >
 
           <ng2-smart-table-title [source]="source" [column]="column"></ng2-smart-table-title>
 

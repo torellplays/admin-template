@@ -32,13 +32,13 @@ var TitleComponent = (function () {
         return false;
     };
     TitleComponent.prototype.changeSortDirection = function () {
-        if (this.currentDirection) {
+       if (this.currentDirection) {
             var newDirection = this.currentDirection === 'asc' ? 'desc' : 'asc';
             this.currentDirection = newDirection;
         }
         else {
             this.currentDirection = this.column.sortDirection;
-        }
+      }
         return this.currentDirection;
     };
     __decorate([
@@ -53,7 +53,7 @@ var TitleComponent = (function () {
         core_1.Component({
             selector: 'ng2-smart-table-title',
             styles: [require('./title.scss')],
-            template: "\n    <span  *ngIf=\"column.isSortable\"\n    (click)=\"sort($event, column)\" \n    class=\"sorting\"\n    [ngClass]=\"currentDirection\">\n      {{ column.title }}\n    </span>\n    <span class=\"ng2-smart-sort\" *ngIf=\"!column.isSortable\">{{ column.title }}</span>\n  "
+            template: "\n    <span  *ngIf=\"column.isSortable\"\n    (click)=\"sort($event, column)\" \n     [ngClass]=\"currentDirection\">\n      {{ column.title }}\n    </span>\n    <span class=\"ng2-smart-sort\" *ngIf=\"!column.isSortable\">{{ column.title }}</span>\n   "
         }),
         __metadata('design:paramtypes', [])
     ], TitleComponent);
