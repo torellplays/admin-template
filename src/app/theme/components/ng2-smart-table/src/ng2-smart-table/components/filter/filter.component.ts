@@ -22,7 +22,7 @@ export class FilterComponent implements AfterViewInit {
 
   @Input() column: Column;
   @Input() source: DataSource;
-  @Input() inputClass: string = 'input-sm';
+  @Input() inputClass: string = '';
 
   @Output() filter = new EventEmitter<any>();
 

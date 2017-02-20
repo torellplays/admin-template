@@ -6,27 +6,35 @@ import { DataSource } from '../../lib/data-source/data-source';
   selector: 'ng2-smart-table-pager',
   styleUrls: ['pager.scss'],
   template: `
-    <div class="col-sm-5"> </div>
-    <div class="col-sm-7">
-      <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
-       <ul *ngIf="shouldShow()" class="pagination">
-        <li class="paginate_button previous disabled" id="example1_previous"
-            [ngClass]="{disabled: getPage() == 1}">
-            <a href="#" (click)="getPage() == 1 ? false : paginate(1)"> Previous </a>
+  <div class="col-sm-5"> </div>
+  <div class="col-sm-7">
+    <div *ngIf="shouldShow()" class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+      <ul class="pagination">
+        <li class="ng2-smart-page-item page-item" [ngClass]="{disabled: getPage() == 1}">
+          <a class="ng2-smart-page-link page-link" href="#"
+          (click)="getPage() == 1 ? false : paginate(1)" aria-label="First">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">First</span>
+          </a>
         </li>
-        <li class="paginate_button" [ngClass]="{active: getPage() == page}" *ngFor="let page of getPages()">
-          <span class="ng2-smart-page-link page-link" *ngIf="getPage() == page">{{ page }}
-           <span class="sr-only">(current)
-           </span>
-          </span>
-          <a class="ng2-smart-page-link page-link" href="#" (click)="paginate(page)" *ngIf="getPage() != page">{{ page }}</a>
+        <li class="ng2-smart-page-item page-item"
+        [ngClass]="{active: getPage() == page}" *ngFor="let page of getPages()">
+          <span class="ng2-smart-page-link page-link"
+          *ngIf="getPage() == page">{{ page }} <span class="sr-only">(current)</span></span>
+          <a class="ng2-smart-page-link page-link" href="#"
+          (click)="paginate(page)" *ngIf="getPage() != page">{{ page }}</a>
         </li>
-        <li class="ng2-smart-page-item page-item"  [ngClass]="{disabled: getPage() == getLast()}">
-          <a href="#" (click)="getPage() == getLast() ? false : paginate(getLast())"> Next</a>
+
+        <li class="ng2-smart-page-item page-item"
+        [ngClass]="{disabled: getPage() == getLast()}">
+          <a class="ng2-smart-page-link page-link" href="#"
+          (click)="getPage() == getLast() ? false : paginate(getLast())" aria-label="Last">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Last</span>
+          </a>
         </li>
       </ul>
-      </div>
-    </div>
+    </div>\</div>
   `
 })
 export class PagerComponent {

@@ -1,9 +1,7 @@
 import {
   Component, Input, Output, SimpleChange, EventEmitter,
-  OnChanges, OnInit
+  OnChanges
 } from '@angular/core';
-
-import { Column } from './lib/data-set/column';
 
 import { Grid } from './lib/grid';
 import { DataSource } from './lib/data-source/data-source';
@@ -12,18 +10,15 @@ import { Row } from './lib/data-set/row';
 import { deepExtend } from './lib/helpers';
 import { LocalDataSource } from './lib/data-source/local/local.data-source';
 
-
 @Component({
   selector: 'ng2-smart-table',
   styleUrls: ['ng2-smart-table.scss'],
   templateUrl: 'ng2-smart-table.html',
 })
-export class Ng2SmartTableComponent implements OnInit, OnChanges{
-  @Input() public column: Column;
-  @Input() public source: DataSource;
+export class Ng2SmartTableComponent implements OnChanges {
 
-
-  @Input() public settings: Object = {};
+  @Input() source: any;
+  @Input() settings: Object = {};
 
   @Output() public rowSelect: EventEmitter<any> = new EventEmitter<any>();
   @Output() public userRowSelect: EventEmitter<any> = new EventEmitter<any>();
@@ -34,7 +29,6 @@ export class Ng2SmartTableComponent implements OnInit, OnChanges{
   @Output() public deleteConfirm: EventEmitter<any> = new EventEmitter<any>();
   @Output() public editConfirm: EventEmitter<any> = new EventEmitter<any>();
   @Output() public createConfirm: EventEmitter<any> = new EventEmitter<any>();
-  @Output() public ssort = new EventEmitter<any>();
 
   grid: Grid;
   defaultSettings: Object = {
@@ -54,14 +48,14 @@ export class Ng2SmartTableComponent implements OnInit, OnChanges{
       inputClass: '',
     },
     edit: {
-      inputClass: '',
+      inputClass: 'input-sm',
       editButtonContent: 'Edit',
       saveButtonContent: 'Update',
       cancelButtonContent: 'Cancel',
       confirmSave: false
     },
     add: {
-      inputClass: '',
+      inputClass: 'input-sm',
       addButtonContent: 'Add New',
       createButtonContent: 'Create',
       cancelButtonContent: 'Cancel',
@@ -83,48 +77,8 @@ export class Ng2SmartTableComponent implements OnInit, OnChanges{
     }
   };
 
-
-
-
   isAllSelected: boolean = false;
-  currentDirection = '';
 
-  ngOnInit(): void {
-    this.source.onChanged().subscribe((elements) => {
-      let sortConf = this.source.getSort();
-
-      if (sortConf.length > 0 && sortConf[0]['field'] === this.column.id) {
-        this.currentDirection = sortConf[0]['direction'];
-      } else {
-        this.currentDirection = '';
-      }
-
-      sortConf.forEach((fieldConf) => {
-
-      });
-    });
-  }
-  changeSortDirection(): string {
-    if (this.currentDirection) {
-      let newDirection = this.currentDirection === 'asc' ? 'desc' : 'asc';
-      this.currentDirection = newDirection;
-    } else {
-      this.currentDirection = this.column.sortDirection;
-    }
-    return this.currentDirection;
-  }
-  _sort(): boolean {
-    this.changeSortDirection();
-    this.source.setSort([
-      {
-        field: this.column.id,
-        direction: this.currentDirection,
-        compare: this.column.getCompareFunction()
-      }
-    ]);
-    this.ssort.emit(null);
-    return false;
-  }
   ngOnChanges(changes: { [propertyName: string]: SimpleChange }): void {
     if (this.grid) {
       if (changes['settings']) {

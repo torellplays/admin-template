@@ -7,13 +7,13 @@ import { Column } from '../../lib/data-set/column';
   selector: 'ng2-smart-table-title',
   styleUrls: ['title.scss'],
   template: `
-    <span
+    <a 
       *ngIf="column.isSortable"
-      [ngClass]="((currentDirection) ? 'sorting_' + currentDirection : 'sorting')"
       (click)="_sort($event, column)"
+      class="ng2-smart-sort-link sort"
       [ngClass]="currentDirection">
       {{ column.title }}
-    </span>
+    </a>
     <span class="ng2-smart-sort" *ngIf="!column.isSortable">{{ column.title }}</span>
   `
 })
