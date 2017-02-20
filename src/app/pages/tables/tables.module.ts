@@ -7,7 +7,7 @@ import { routing }       from './tables.routing';
 import { Tables } from './tables.component';
 import { SimpleTables } from './components/simpleTables/simpleTables.component';
 import { DataTables } from './components/dataTables/dataTables.component';
-import { Ng2SmartTableModule } from '../../theme/components/ng2-smart-table/';
+import { Ng2SmartTableModule } from '../../theme/components/ng2-smart-table/ng2-smart-table';
 import { SimpleTablesService } from './components/simpleTables/simpleTables.service';
 import { ResponsiveTable } from './components/simpleTables/components/responsiveTable';
 import { StripedTable } from './components/simpleTables/components/stripedTable';
@@ -23,7 +23,7 @@ import { DataTablesService } from './components/dataTables/dataTables.service';
     CommonModule,
     FormsModule,
     NgaModule,
-    Ng2SmartTableModule,
+   Ng2SmartTableModule,
     routing
   ],
   declarations: [

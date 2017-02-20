@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { DataTablesService } from './dataTables.service';
-import { LocalDataSource } from '../../../../theme/components/ng2-smart-table';
+import { LocalDataSource } from '../../../../theme/components/ng2-smart-table/ng2-smart-table';
 import {SearchTableComponent} from 'ng2-search-table/ng2-search-table';
 import {TextFilterComponent} from 'ng2-search-table/ng2-search-table';
 
