@@ -35,9 +35,9 @@
       <th *ngIf="grid.showActionColumn('left')" class="ng2-smart-actions">
         <div class="ng2-smart-title">{{ grid.getSetting('actions.columnTitle') }}</div>
       </th>
-      <th *ngFor="let column of grid.getColumns()" class="ng2-smart-th {{ column.id }}" [ngClass]="column.class">
+      <th *ngFor="let column of grid.getColumns()" class="ng2-smart-th {{ column.id }}" [ngClass]="column.class" >
         <div class="ng2-smart-title">
-          <ng2-smart-table-title [source]="source" [column]="column" (sort)="sort($event)"></ng2-smart-table-title>
+          <ng2-smart-table-title [src]="source" [column]="column" (ssort)="ssort($event)"></ng2-smart-table-title>
         </div>
       </th>
       <th *ngIf="grid.showActionColumn('right')" class="ng2-smart-actions">

@@ -1,25 +1,29 @@
 import {
-  Component, Input, Output, SimpleChange, EventEmitter,
-  OnChanges
+  Component, Input, Output, SimpleChange, EventEmitter, OnInit,
+  OnChanges,
 } from '@angular/core';
 
 import { Grid } from './lib/grid';
 import { DataSource } from './lib/data-source/data-source';
 import { Row } from './lib/data-set/row';
 
+import { Column } from './lib/data-set/column';
+
+import { TitleComponent } from './components/title/title.component';
 import { deepExtend } from './lib/helpers';
 import { LocalDataSource } from './lib/data-source/local/local.data-source';
 
 @Component({
   selector: 'ng2-smart-table',
+  //providers: [TitleComponent, DataSource],
   styleUrls: ['ng2-smart-table.scss'],
   templateUrl: 'ng2-smart-table.html',
 })
-export class Ng2SmartTableComponent implements OnChanges {
+export class Ng2SmartTableComponent implements OnInit, OnChanges {
 
-  @Input() source: any;
-  @Input() settings: Object = {};
-
+  @Input() public source: any;
+  @Input() public column: Column;
+  @Input() public settings: Object = {};
   @Output() public rowSelect: EventEmitter<any> = new EventEmitter<any>();
   @Output() public userRowSelect: EventEmitter<any> = new EventEmitter<any>();
   @Output() public delete: EventEmitter<any> = new EventEmitter<any>();
@@ -29,6 +33,8 @@ export class Ng2SmartTableComponent implements OnChanges {
   @Output() public deleteConfirm: EventEmitter<any> = new EventEmitter<any>();
   @Output() public editConfirm: EventEmitter<any> = new EventEmitter<any>();
   @Output() public createConfirm: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public sort = new EventEmitter<any>();
+
 
   grid: Grid;
   defaultSettings: Object = {
@@ -77,7 +83,15 @@ export class Ng2SmartTableComponent implements OnChanges {
     }
   };
 
+  @Input() public src: DataSource;
+  @Input() public title: TitleComponent;
   isAllSelected: boolean = false;
+
+  currentDirection = this.title.currentDirection;
+  //constructor(private title: TitleComponent, private src: DataSource) {
+//
+  //}
+
 
   ngOnChanges(changes: { [propertyName: string]: SimpleChange }): void {
     if (this.grid) {
@@ -90,6 +104,28 @@ export class Ng2SmartTableComponent implements OnChanges {
     } else {
       this.initGrid();
     }
+  }
+  ngOnInit(): void {
+    this.src.onChanged().subscribe((elements) => {
+      let sortConf = this.src.getSort();
+
+      if (sortConf.length > 0 && sortConf[0]['field'] === this.column.id) {
+        this.currentDirection = sortConf[0]['direction'];
+      } else {
+        this.currentDirection = '';
+      }
+
+      sortConf.forEach((fieldConf) => {
+
+      });
+    });
+  }
+  _sort() {
+    this.title._sort();
+  }
+
+  changeSortDirection(){
+    this.title.changeSortDirection();
   }
 
   onAdd(event): boolean {
@@ -230,7 +266,7 @@ export class Ng2SmartTableComponent implements OnChanges {
     this.resetAllSelector();
   }
 
-  sort($event) {
+  ssort($event) {
     this.resetAllSelector();
   }
 

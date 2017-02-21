@@ -18,6 +18,7 @@ import {
 import { FilterComponent } from './ng2-smart-table/components/filter/filter.component';
 import { PagerComponent } from './ng2-smart-table/components/pager/pager.component';
 import { TitleComponent } from './ng2-smart-table/components/title/title.component';
+import { DataSource } from './ng2-smart-table/lib/data-source/data-source';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { TitleComponent } from './ng2-smart-table/components/title/title.compone
     TitleComponent,
     ...NG2_SMART_TABLE_DIRECTIVES
   ],
+  providers : [],
   exports: [
     ...NG2_SMART_TABLE_DIRECTIVES
   ]

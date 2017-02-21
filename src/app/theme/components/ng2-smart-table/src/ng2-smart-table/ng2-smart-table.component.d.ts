@@ -1,9 +1,12 @@
-import { SimpleChange, EventEmitter, OnChanges } from '@angular/core';
+import { SimpleChange, EventEmitter, OnInit, OnChanges } from '@angular/core';
 import { Grid } from './lib/grid';
 import { DataSource } from './lib/data-source/data-source';
+import { TitleComponent } from './components/title/title.component';
 import { Row } from './lib/data-set/row';
-export declare class Ng2SmartTableComponent implements OnChanges {
+export declare class Ng2SmartTableComponent implements OnInit, OnChanges {
     source: any;
+    src: DataSource;
+    title: TitleComponent;
     settings: Object;
     rowSelect: EventEmitter<any>;
     userRowSelect: EventEmitter<any>;
@@ -16,6 +19,7 @@ export declare class Ng2SmartTableComponent implements OnChanges {
     grid: Grid;
     defaultSettings: Object;
     isAllSelected: boolean;
+    ngOnInit(): void;
     ngOnChanges(changes: {
         [propertyName: string]: SimpleChange;
     }): void;

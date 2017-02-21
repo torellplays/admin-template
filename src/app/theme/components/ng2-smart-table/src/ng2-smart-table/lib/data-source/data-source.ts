@@ -1,5 +1,7 @@
+import { Injectable, Component } from '@angular/core';
 import { Subject, Observable } from 'rxjs/Rx';
 
+@Injectable()
 export abstract class DataSource {
 
   protected onChangedSource = new Subject<any>();
